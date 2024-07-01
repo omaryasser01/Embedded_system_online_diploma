@@ -14,18 +14,18 @@
 int main(void)
 {
 	int n;
-	float sum=0,avg;
-	printf("enter number of data\n");
+	float sum=0,avg,a[n];
+	printf("enter the number of data: ");
 	fflush(stdin); fflush(stdout);
 	scanf("%d",&n);
-	float a[n];
 	for (int i=0;i<n;i++)
 	{
-		printf("enter number ");
+		printf("enter number: ");
 		fflush(stdin); fflush(stdout);
 		scanf("%f",&a[i]);
 		sum+=a[i];
 	}
 	avg=sum/n;
-	printf("average = %f",avg);
+	printf("Average = %f",avg);
+	return 0;
 }
