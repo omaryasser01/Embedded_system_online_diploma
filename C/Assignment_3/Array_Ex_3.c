@@ -13,40 +13,41 @@
 
 int main(void)
 {
-	int i,j;
-	printf("enter rows and columns of matrix\n");
-	fflush(stdin); fflush(stdout);
-	scanf("%d %d",&i,&j);
-	int a[i][j];
+	int r,c;
 
-	for (int x=0;x<i;x++)
+	printf("enter rows and columns of the matrix ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d %d",&r,&c);
+	int a[r][c];
+	printf("enter elements of the matrix\n ");
+	for (int i=0;i<r;i++)
 	{
-		for (int z=0;z<j;z++)
+		for (int y=0;y<c;y++)
 		{
-			printf("enter elements of matrix\n");
+			printf("enter element a%d%d ",i+1,y+1);
 			fflush(stdin); fflush(stdout);
-			scanf("%d",&a[x][z]);
+			scanf("%d",&a[i][y]);
 		}
 	}
 	printf("entered matrix: \n");
-	for (int x=0;x<i;x++)
+	for (int q=0;q<r;q++)
+	{
+		for (int w=0;w<c;w++)
 		{
-			for (int z=0;z<j;z++)
-			{
-				printf("%d\t",a[x][z]);
-			}
-			printf("\n");
+			printf("%d\t",a[q][w]);
 		}
+		printf("\n");
+	}
 	printf("\n");
-	int b[j][i];
-	printf("transpose of matrix:\n");
-	for (int q=0;q<j;q++)
-			{
-				for (int w=0;w<i;w++)
-				{
-					b[q][w]=a[w][q];
-					printf("%d\t",b[q][w]);
-				}
-				printf("\n");
-			}
+	int b[c][r];
+	printf("transpose of matrix: \n");
+	for (int k=0;k<c;k++)
+	{
+		for (int l=0;l<r;l++)
+		{
+			b[k][l]=a[l][k];
+			printf("%d\t",b[k][l]);
+		}
+		printf("\n");
+	}
 }
